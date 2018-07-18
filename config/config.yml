@@ -1,0 +1,13 @@
+project:
+  name: hogehoge
+
+pubsub:
+  topic: test
+  subscription: hoge
+  data_key: jsonPayload.data
+
+bigquery:
+  - table_name: test.hoge_%Y%m%d
+    date_partiton: true
+    schema:
+      test_id: STRING
