@@ -53,4 +53,9 @@ class BigQueryExportConfig(Config):
             return self.table_name
 
     def get_schema_string(self):
-        return ""
+        s = ""
+        for k, v in self.schema.items():
+            s += k + ":" + v
+            s += ","
+        s = s[:-1]
+        return s
